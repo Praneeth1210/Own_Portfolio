@@ -53,9 +53,9 @@ const Hero = () => {
       <div className="hero-container" ref={heroRef}>
         <div className="hero-content">
           <div className="hero-text fade-in">
-            <h1 className="hero-name">
-              P Sai Praneeth <span className="gradient-text">Reddy</span>
-            </h1>
+             <h2 className="section-title fade-in">
+  <span className="gradient-text">P. Sai Praneeth Reddy</span>
+</h2>
             
             <div className="hero-titles fade-in-delay-1">
               <div className="title-item">MERN Stack Web Developer</div>

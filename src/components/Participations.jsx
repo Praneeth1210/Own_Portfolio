@@ -28,7 +28,10 @@ const Participations = () => {
   return (
     <section id="participations" className="section participations">
       <div className="container">
-        <h2 className="section-title gradient-text fade-in">Hackathons & Participations</h2>
+        <h2 className="section-title fade-in">
+  <span className="gradient-text">Participatipns</span>
+</h2>
+
         
         <div className="participations-grid">
           {participationsData.map((participation, index) => (

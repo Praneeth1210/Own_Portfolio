@@ -67,12 +67,15 @@ body {
 /* Gradient text */
 .gradient-text {
   background: linear-gradient(45deg, #64ffda, #00d4ff, #0099ff);
+  background-size: 300% 300%;
+  animation: gradientShift 4s ease infinite;
+  display: inline-block;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  background-size: 300% 300%;
-  animation: gradientShift 4s ease infinite;
 }
+
+
 
 @keyframes gradientShift {
   0%, 100% { background-position: 0% 50%; }

@@ -34,7 +34,10 @@ const Certifications = () => {
   return (
     <section id="certifications" className="section certifications">
       <div className="container">
-        <h2 className="section-title gradient-text fade-in">Certifications</h2>
+        <h2 className="section-title fade-in">
+  <span className="gradient-text">Certifications</span>
+</h2>
+
         
         <div className="certifications-grid">
           {certificationsData.map((cert, index) => (

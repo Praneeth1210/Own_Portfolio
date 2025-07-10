@@ -37,7 +37,7 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo">
-          <span className="gradient-text">PSP</span>
+          <span className="gradient-text">PSPR</span>
         </div>
         
         <ul className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>

@@ -55,7 +55,10 @@ const Skills = () => {
   return (
     <section id="skills" className="section skills" ref={skillsRef}>
       <div className="container">
-        <h2 className="section-title gradient-text fade-in">Skills & Expertise</h2>
+        <h2 className="section-title fade-in">
+  <span className="gradient-text">My Skills</span>
+</h2>
+
         
         <div className="skills-grid">
           {Object.entries(skillsData).map(([category, skills], categoryIndex) => (

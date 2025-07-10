@@ -6,7 +6,9 @@ const About = () => {
   return (
     <section id="about" className="section about">
       <div className="container">
-        <h2 className="section-title gradient-text fade-in">About Me</h2>
+         <h2 className="section-title fade-in">
+  <span className="gradient-text">About Me</span>
+</h2>
         
         <div className="about-content">
           <div className="about-text fade-in-delay-1">
@@ -48,8 +50,8 @@ const About = () => {
           <div className="about-visual fade-in-delay-2">
             <div className="stats-container">
               <div className="stat-item glass hover-scale">
-                <div className="stat-number gradient-text">2+</div>
-                <div className="stat-label">Years Experience</div>
+                <div className="stat-number gradient-text">6</div>
+                <div className="stat-label">Months Internship Experience</div>
               </div>
               <div className="stat-item glass hover-scale">
                 <div className="stat-number gradient-text">6+</div>

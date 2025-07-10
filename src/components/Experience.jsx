@@ -9,7 +9,7 @@ const Experience = () => {
       company: "Workcohol",
       period: "Jan 2025 – Apr 2025",
       description: "Collaborated in a team environment to design and build a full-featured mentorship booking platform. Developed dynamic role-based UI components using React, focusing on user flows, dashboard integration, and frontend logic. Improved team efficiency through reusable design patterns and version control with Git.",
-      skills: ["React", "JavaScript", "Team Collaboration", "Git", "UI/UX Design"]
+      skills: ["React", "JavaScript", "Team Collaboration", "Git", "UI Design"]
     },
     {
       title: "Front-End Developer Intern",
@@ -23,7 +23,10 @@ const Experience = () => {
   return (
     <section id="experience" className="section experience">
       <div className="container">
-        <h2 className="section-title gradient-text fade-in">Work Experience</h2>
+        <h2 className="section-title fade-in">
+  <span className="gradient-text">Work Experience</span>
+</h2>
+
         
         <div className="timeline">
           {experienceData.map((exp, index) => (

@@ -27,7 +27,11 @@ const Education = () => {
   return (
     <section id="education" className="section education">
       <div className="container">
-        <h2 className="section-title gradient-text fade-in">Education</h2>
+        <h2 className="section-title fade-in">
+  <span className="gradient-text">Education</span>
+</h2>
+
+
         
         <div className="education-grid">
           {educationData.map((edu, index) => (

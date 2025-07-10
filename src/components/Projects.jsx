@@ -57,7 +57,10 @@ const Projects = () => {
   return (
     <section id="projects" className="section projects">
       <div className="container">
-        <h2 className="section-title gradient-text fade-in">Featured Projects</h2>
+        <h2 className="section-title fade-in">
+  <span className="gradient-text">My Projects</span>
+</h2>
+
         
         <div className="projects-grid">
           {projectsData.map((project, index) => (

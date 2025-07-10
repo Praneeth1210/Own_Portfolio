@@ -15,6 +15,22 @@
               radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
   pointer-events: none;
 }
+.gradient-text {
+  display: inline-block;
+  background: linear-gradient(45deg, #64ffda, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
 
 .skills-grid {
   display: grid;

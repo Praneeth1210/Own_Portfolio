@@ -55,7 +55,10 @@ const Contact = () => {
   return (
     <section id="contact" className="section contact">
       <div className="container">
-        <h2 className="section-title gradient-text fade-in">Get In Touch</h2>
+        <h2 className="section-title fade-in">
+  <span className="gradient-text">Get In Touch</span>
+</h2>
+
         
         <div className="contact-content">
           <div className="contact-info fade-in-delay-1">
