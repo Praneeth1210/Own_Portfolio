@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P Sai Praneeth Reddy – Automation Engineer</title>
+<meta name="description" content="Portfolio of P Sai Praneeth Reddy – Python automation, Playwright, REST APIs, Power Automate, machine learning and full-stack projects.">
+<meta property="og:title" content="P Sai Praneeth Reddy – Portfolio">
+<meta property="og:description" content="Automation that turns 25-minute manual reports into 2-minute runs.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0f1e;--bg2:#111833;--ink:#e9edf9;--mute:#98a2c3;--line:#222c52;--amber:#ffb547;--mint:#5eead4;--violet:#8b7bff;color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 "Instrument Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.08;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+canvas#bg{position:fixed;inset:0;z-index:-1;opacity:.5}
+#glow{position:fixed;width:420px;height:420px;border-radius:50%;pointer-events:none;z-index:-1;background:radial-gradient(circle,rgba(139,123,255,.18),transparent 65%);transform:translate(-50%,-50%);left:50%;top:30%}
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--mint),var(--amber));z-index:60}
+nav{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:50;display:flex;gap:2px;padding:6px;border:1px solid var(--line);border-radius:99px;background:rgba(10,15,30,.78);backdrop-filter:blur(12px);max-width:calc(100vw - 16px);overflow-x:auto;scrollbar-width:none}
+nav a{padding:7px 13px;border-radius:99px;font-size:14px;color:var(--mute);white-space:nowrap;transition:.25s}
+nav a:hover,nav a.on{background:var(--bg2);color:var(--ink)}
+section{max-width:1120px;margin:0 auto;padding:110px 22px 30px}
+h2{font-size:clamp(32px,5vw,54px);margin-bottom:12px}
+h2 small{display:block;font:500 16px "Instrument Sans",sans-serif;color:var(--mute);letter-spacing:0;margin-top:10px}
+.sub{color:var(--mute);max-width:62ch;margin-bottom:34px}
+/* hero */
+#home{min-height:100vh;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:120px}
+.hi{color:var(--mint);font-weight:600;margin-bottom:14px}
+h1{font-size:clamp(40px,6.4vw,80px);font-weight:800;cursor:pointer}
+h1 .w{display:inline-block;white-space:nowrap;margin-right:.28em}
+h1 .l{display:inline-block;opacity:0;animation:drop 1.1s cubic-bezier(.2,1.2,.3,1) forwards;animation-delay:calc(var(--i)*70ms)}
+@keyframes drop{0%{opacity:0;transform:translateY(-140px) rotate(180deg) scale(.4)}60%{opacity:1}100%{opacity:1;transform:none}}
+.role{font-size:clamp(18px,2.4vw,24px);margin:18px 0 8px;min-height:1.6em}
+.role b{color:var(--amber);font-weight:600}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--amber);vertical-align:-3px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.lead{color:var(--mute);max-width:52ch}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:13px 24px;border-radius:12px;font-weight:600;border:1px solid var(--line);transition:transform .2s,box-shadow .2s;cursor:pointer;background:none;color:var(--ink);font-size:16px;font-family:inherit}
+.btn.p{background:var(--amber);color:#1b1200;border-color:var(--amber)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px -10px rgba(255,181,71,.5)}
+.run{background:linear-gradient(160deg,var(--bg2),#0c1228);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 30px 80px -30px rgba(139,123,255,.45)}
+.run header{display:flex;justify-content:space-between;margin-bottom:12px;font-weight:600}
+.run header small{color:var(--mute);font-weight:400}
+.step{display:flex;align-items:center;gap:12px;padding:9px 12px;border-radius:10px;color:var(--mute);font-size:15px;transition:.3s}
+.step i{width:20px;height:20px;border-radius:50%;border:2px solid var(--line);flex:none;display:grid;place-items:center;font-style:normal;font-size:11px}
+.step.act{color:var(--ink);background:rgba(139,123,255,.12)}
+.step.act i{border-color:var(--violet);border-top-color:transparent;animation:sp .7s linear infinite}
+.step.ok{color:var(--ink)}
+.step.ok i{background:var(--mint);border-color:var(--mint);color:#00201c}
+.step.ok i:after{content:"✓"}
+@keyframes sp{to{transform:rotate(360deg)}}
+.cmp{margin-top:14px;display:grid;gap:8px;font-size:14px}
+.bar{height:26px;border-radius:7px;background:#1a2244;overflow:hidden}
+.bar div{height:100%;display:flex;align-items:center;padding-left:10px;font-weight:600;border-radius:7px;white-space:nowrap}
+.bar .m{background:#5a3a1a;width:100%;color:var(--amber)}
+.bar .a{background:var(--mint);width:0;color:#00201c;transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding-top:0}
+.stat{border:1px solid var(--line);border-radius:16px;padding:24px 20px;background:rgba(17,24,51,.55)}
+.stat b{display:block;font:800 clamp(34px,4.4vw,52px)/1 "Bricolage Grotesque",sans-serif;color:var(--amber)}
+.stat span{color:var(--mute);font-size:15px}
+/* about */
+.ab{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.box{border:1px solid var(--line);border-radius:18px;padding:26px;background:rgba(17,24,51,.55)}
+.box h3{font-size:21px;margin-bottom:10px;color:var(--amber)}
+ul.b{padding-left:20px;color:var(--mute)}
+ul.b li{margin:6px 0}
+ul.b li::marker{color:var(--amber)}
+/* projects */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.tab{padding:10px 16px;border-radius:12px;border:1px solid var(--line);background:none;color:var(--mute);cursor:pointer;font:600 15px "Instrument Sans",sans-serif;transition:.25s}
+.tab[aria-selected=true]{background:var(--bg2);color:var(--ink);border-color:var(--violet)}
+.panel{display:none;border:1px solid var(--line);border-radius:22px;padding:32px;background:linear-gradient(160deg,var(--bg2),rgba(10,15,30,.4));animation:fd .5s}
+.panel.on{display:block}
+@keyframes fd{from{opacity:0;transform:translateX(24px)}}
+.pg{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
+.panel h3{font-size:30px;margin-bottom:6px}
+.tag{color:var(--mint);font-size:14px;font-weight:600;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chips span{font-size:13px;padding:5px 12px;border:1px solid var(--line);border-radius:99px;background:rgba(94,234,212,.06)}
+.impact{display:flex;flex-direction:column;gap:14px;justify-content:center}
+.impact div{border-left:3px solid var(--amber);padding:6px 0 6px 16px}
+.impact b{font:800 32px/1.1 "Bricolage Grotesque",sans-serif;display:block}
+.impact span{color:var(--mute);font-size:14px}
+.flow{margin-top:26px;border:1px dashed var(--line);border-radius:16px;padding:16px;background:rgba(10,15,30,.6)}
+.flow>small{display:block;color:var(--mute);font-size:13px;margin-bottom:10px;font-weight:600}
+.fl{display:flex;flex-wrap:wrap;gap:8px 4px;align-items:center}
+.n{font-size:13.5px;padding:8px 12px;border-radius:10px;border:1px solid var(--line);color:var(--mute);background:var(--bg2);transition:.35s;position:relative}
+.ar{color:var(--line);font-size:16px;transition:.35s}
+.n.ok{color:var(--ink);border-color:var(--mint)}
+.ar.ok{color:var(--mint)}
+.n.act{color:#1b1200;background:var(--amber);border-color:var(--amber);transform:translateY(-3px) scale(1.06);box-shadow:0 8px 24px -6px rgba(255,181,71,.7)}
+h3.sec{font-size:24px;margin:34px 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.card{border:1px solid var(--line);border-radius:18px;padding:24px;background:rgba(17,24,51,.55);transition:transform .15s,border-color .3s;will-change:transform}
+.card:hover{border-color:var(--violet)}
+.card h3{font-size:21px;margin:6px 0 8px}
+.card .k{font-size:13px;color:var(--amber);font-weight:600}
+.card ul.b{font-size:15px}
+.card .flow{margin-top:16px;padding:12px}
+.card .n{font-size:12px;padding:6px 9px}
+.card a{display:inline-block;margin-top:12px;font-weight:600;color:var(--mint);font-size:15px}
+/* skills */
+.fil{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.sk{border:1px solid var(--line);border-radius:14px;padding:16px 18px;background:rgba(17,24,51,.55)}
+.sk div{display:flex;justify-content:space-between;font-weight:600;margin-bottom:9px}
+.sk em{font-style:normal;color:var(--amber)}
+.sk span{display:block;height:8px;border-radius:9px;background:#1a2244;overflow:hidden}
+.sk span i{display:block;height:100%;width:0;border-radius:9px;background:linear-gradient(90deg,var(--violet),var(--mint));transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.mq{overflow:hidden;border-block:1px solid var(--line);padding:16px 0;margin:0 0 28px;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.mq div{display:flex;gap:44px;width:max-content;animation:mq 34s linear infinite;font:700 24px "Bricolage Grotesque",sans-serif;color:var(--mute)}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* exp / ach / edu */
+.exp{border:1px solid var(--line);border-radius:20px;padding:28px;background:rgba(17,24,51,.55);margin-bottom:16px}
+.exp h3{font-size:23px}
+.exp small{color:var(--mint);font-weight:600}
+.ach{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.ach .box{position:relative;overflow:hidden}
+.ach .box:before{content:"★";position:absolute;right:16px;top:8px;font-size:34px;color:var(--amber);opacity:.25}
+.ach b{font:800 21px "Bricolage Grotesque",sans-serif;display:block;margin-bottom:6px}
+.ach p{color:var(--mute);font-size:15px}
+.ct{text-align:center;padding-bottom:90px}
+.ct h2{font-size:clamp(36px,7vw,72px)}
+.ct .cta{justify-content:center}
+footer{text-align:center;color:var(--mute);font-size:14px;padding:0 0 40px}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+@media(max-width:860px){#home,.pg,.ab{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.panel{padding:22px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,h1 .l{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="prog"></div><canvas id="bg"></canvas><div id="glow"></div>
+<nav aria-label="Main">
+<a href="#home" class="on">Home</a><a href="#about">About</a><a href="#work">Projects</a><a href="#skills">Skills</a><a href="#exp">Experience</a><a href="#ach">Achievements</a><a href="#edu">Education</a><a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+<div>
+<p class="hi">Hi, I'm</p>
+<h1 id="name" title="Click to replay">P Sai Praneeth Reddy</h1>
+<p class="role">I build <b id="typed"></b><span class="caret"></span></p>
+<p class="lead">Associate Analyst at Lowe's India. I replace repetitive ticket and reporting work with Python automation that runs end to end and checks its own numbers.</p>
+<div class="cta"><a class="btn p" href="#work">See projects</a><a class="btn" href="#contact">Get in touch</a></div>
+</div>
+<div class="run" aria-label="Live demo of an automation run">
+<header>Automation run <small id="clock">00:00</small></header>
+<div id="hsteps"></div>
+<div class="cmp">
+<div><small>Manual process: about 25 min</small><div class="bar"><div class="m">25 min</div></div></div>
+<div><small>Automated run: about 2 min</small><div class="bar"><div class="a" id="abar">2 min</div></div></div>
+</div>
+</div>
+</section>
+
+<section class="stats rv">
+<div class="stat"><b data-n="100" data-s="+">0</b><span>hours a year saved by the EOD report automation</span></div>
+<div class="stat"><b data-n="75" data-s="%">0</b><span>fewer manual tickets (20 → 5 a day)</span></div>
+<div class="stat"><b data-n="20" data-s="+">0</b><span>production issues triaged daily on SLA</span></div>
+<div class="stat"><b data-n="9" data-s="">0</b><span>projects: 5 in production, 4 personal</span></div>
+</section>
+
+<section id="about">
+<h2 class="rv">About me</h2>
+<div class="ab rv">
+<div class="box"><h3>Who I am</h3><ul class="b">
+<li>Associate Analyst, MerchOps at Lowe's Services India, Bengaluru.</li>
+<li>Python automation, Playwright crawlers, REST APIs and Power Automate.</li>
+<li>Machine learning (Random Forest) and full-stack web development.</li>
+<li>Salesforce Certified Administrator.</li>
+<li>Currently learning Databricks and PySpark.</li></ul></div>
+<div class="box"><h3>What I focus on</h3><ul class="b">
+<li>Proactive monitoring and SLA-based incident triage across ServiceNow, Remedy and Jira.</li>
+<li>Root-cause analysis, trend analysis and case management with full documentation.</li>
+<li>Reports and alerts that run themselves and reconcile their own counts.</li>
+<li>Languages: English, Hindi, Telugu.</li></ul></div>
+</div>
+</section>
+
+<section id="work">
+<h2 class="rv">Projects<small>Production projects at Lowe's India first, then personal and academic projects.</small></h2>
+<h3 class="sec">Production projects</h3>
+<div class="tabs" id="tabs" role="tablist"></div>
+<div id="panels"></div>
+<h3 class="sec">Personal and academic projects</h3>
+<div class="grid" id="pgrid"></div>
+</section>
+
+<section id="skills">
+<h2 class="rv">Skills<small>Ratings reflect how deeply each skill is used across my projects.</small></h2>
+<div class="mq" aria-hidden="true"><div id="mq"></div></div>
+<div class="fil" id="fil"></div>
+<div class="sg" id="sg"></div>
+</section>
+
+<section id="exp">
+<h2 class="rv">Experience</h2>
+<div class="exp rv"><h3>Associate Analyst, MerchOps</h3><small>Lowe's Services India Pvt. Ltd. · Bengaluru · 2026 to present</small>
+<ul class="b"><li>Monitor and triage 20+ daily production issues on an SLA basis across ServiceNow, Remedy and Jira, with root-cause analysis and full documentation.</li>
+<li>Built a Python automation that validates internal database records and auto-triggers alerts or ServiceNow cases, cutting manual tickets by 75% (20 → 5 a day).</li>
+<li>Built a Playwright crawler with the OpenAI REST API that generates weekly trend-analysis reports, scheduled through Power Automate.</li>
+<li>Automated the EOD Team Report, O&amp;M Remedy Report and Dropship Summary end to end.</li>
+<li>Escalate systemic issues across teams and maintain knowledge-base documentation to speed up future fixes.</li></ul></div>
+<div class="exp rv"><h3>Software Engineer Intern</h3><small>Workcohol Solutions Pvt. Ltd · Remote · 2025</small>
+<ul class="b"><li>Developed the complete frontend of a Mentorship Booking Platform: dashboards, booking workflows, role-based navigation and REST API integration.</li>
+<li>Designed the MySQL database: schema design, table relationships and optimised queries.</li>
+<li>Implemented a Jenkins CI pipeline to automate build, test and deployment steps.</li>
+<li>Followed clean principles and structured development for maintainability.</li></ul></div>
+<div class="exp rv"><h3>Data Analyst (Academic Work)</h3><small>JBIET · Moinabad, Telangana · 2024 to 2025</small>
+<ul class="b"><li>Organised and maintained student academic data and departmental files in Microsoft Excel.</li>
+<li>Cleaned datasets by removing duplicates, filling missing values and fixing data formats.</li>
+<li>Built pivot tables and charts showing trends in student performance.</li>
+<li>Prepared PowerPoint presentations to communicate findings, working with peers and faculty for accuracy.</li></ul></div>
+</section>
+
+<section id="ach">
+<h2 class="rv">Achievements</h2>
+<div class="ach rv">
+<div class="box"><b>75% fewer manual tickets</b><p>Python automation cut daily manual tickets from 20 to 5 at Lowe's India.</p></div>
+<div class="box"><b>~100 hours saved a year</b><p>EOD Team Report automation: 25 minutes a day down to about 2.</p></div>
+<div class="box"><b>Salesforce Certified Administrator</b><p>Flow automation, validation rules, Sales Cloud and Service Cloud.</p></div>
+<div class="box"><b>GreatAppSec Hackathon</b><p>Led a 3-member team presenting "PhishNet: Combatting Social Engineering and Phishing Attacks". Qualified for the prototype round.</p></div>
+<div class="box"><b>Silicon Maze Hackathon</b><p>24-hour hybrid hackathon by Web Enthusiasts' Club, NITK. Advanced to Round 2 in algorithm solving.</p></div>
+</div>
+</section>
+
+<section id="edu">
+<h2 class="rv">Education</h2>
+<div class="ab rv">
+<div class="box"><h3>Bachelor of Technology, Computer Science</h3><ul class="b"><li>JB Institute of Engineering and Technology, Hyderabad</li><li>2021 to 2025</li><li>CGPA: 8.36</li></ul></div>
+<div class="box"><h3>Higher Secondary Education</h3><ul class="b"><li>Sri Chaitanya Junior College, Hyderabad</li><li>2019 to 2021</li><li>CGPA: 9.54</li></ul></div>
+</div>
+</section>
+
+<section id="contact" class="ct">
+<h2 class="rv">Let's automate something.</h2>
+<p class="sub rv" style="margin-inline:auto">Open to roles in automation, data engineering and Salesforce.</p>
+<div class="cta rv"><a class="btn p" href="mailto:praneethreddy2704@gmail.com">praneethreddy2704@gmail.com</a><a class="btn" href="tel:+918688525256">+91 8688525256</a><a class="btn" href="https://github.com/" target="_blank" rel="noopener">GitHub</a><a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></div>
+</section>
+<footer>© 2026 P Sai Praneeth Reddy · Bengaluru, India</footer>
+
+<script>
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+/* ---------- data ---------- */
+const prod=[
+{t:"EOD Team Report",h:"EOD Team Report Automation",g:"ServiceNow → Excel → Power Automate → Microsoft Teams",
+b:["Retrieves Assigned Today, New, Open and Resolved ticket data from ServiceNow automatically.","Separates Item and Vendor tickets and applies the 5:00 PM cutoff for Open tickets.","Builds GMM-wise Item and Vendor summaries and validates every ticket count.","Generates the Excel reports, then Power Automate posts New/Open details to the O&M SSCB channel and the EOD report to the Leaders channel.","Tested across multiple scenarios with Senior Analysts."],
+c:["Python","Playwright","Pandas","OpenPyXL","XlsxWriter","Keyring","Power Automate","Teams","OneDrive"],
+i:[["25 → 2 min","per working day"],["~100 hrs","saved each year"],["1 click","open in VS Code and Run"]],
+f:["Crawler starts","ServiceNow login","Navigate filtered lists","Extract ticket data","Split Item / Vendor","Reconcile counts","Build Excel reports","Trigger Power Automate","Post to Teams channels"]},
+{t:"O&M Remedy Report",h:"O&M Remedy Report Automation",g:"Power BI → Excel → Outlook",
+b:["Downloads the latest Remedy data from Power BI with the required filters applied.","Filters the required team members and builds the final formatted Excel report.","Reconciles ticket counts so the right team members and totals are always included.","Opens the latest Remedy Report email thread in Outlook (pywin32) ready to send.","Records the runtime of every stage: Power BI download, Excel transformation, Outlook processing and the total."],
+c:["Python","Playwright","Pandas","pywin32","Power BI","Outlook","Excel"],
+i:[["25–30 → 2–3 min","per reporting cycle"],["~21.7 hrs","saved each year"],["0 pivots","no manual pivots or copy-paste"]],
+f:["Crawler starts","Power BI login","Apply filters","Download source Excel","Transform with Python","Reconcile counts","Create final .xlsx","Open Outlook thread","Reply All with tables"]},
+{t:"Dropship Summary",h:"Dropship Summary Automation",g:"Database → Python → Summary report",
+b:["Pulls dropship data straight from the Database with no manual extracts.","Consolidates and validates the data before summarising it.","Produces the dropship summary report automatically.","Replaces a manual process that takes 2-4 days with a repeatable automated run."],
+c:["Python","SQL","Pandas","Excel"],
+i:[["2-4 days","manual process replaced"],["Validated","checks built into every run"]],
+f:["Python starts","Connect to Database","Query dropship data","Consolidate","Validate","Build summary report"]},
+{t:"ServiceNow Alerting",h:"ServiceNow Ticket Automation & Alerting",g:"Database → Python + SQL → ServiceNow",
+b:["Validates internal database records with Python and SQL.","Auto-triggers alerts or ServiceNow case creation for exceptions.","Cut manual ticket volume and effort by 75% (20 → 5 tickets a day).","Scheduled through Power Automate."],
+c:["Python","SQL","pywin32","ServiceNow","Power Automate"],
+i:[["75%","fewer manual tickets"],["20 → 5","tickets a day"]],
+f:["Scheduled run","Query database","Validate records","Detect exceptions","Send alert","Create ServiceNow case"]},
+{t:"Weekly BI Report",h:"Automated Weekly Business Intelligence Report",g:"ServiceNow → OpenAI API → HTML/CSS report",
+b:["Playwright crawler collects ticket data for the week.","OpenAI REST API turns ticket patterns into trend and root-cause analysis.","Generates a leadership-ready HTML/CSS report.","Runs fully automated end to end, scheduled through Power Automate."],
+c:["Python","Playwright","OpenAI API","HTML/CSS","Power Automate"],
+i:[["Weekly","report for leadership"],["0 manual steps","fully automated"]],
+f:["Scheduled run","Crawler login","Collect ticket data","Call OpenAI REST API","Trend + root-cause analysis","Render HTML/CSS report","Deliver to leadership"]}];
+const pers=[
+{k:"Machine learning · Web",h:"Energy Economy Prediction for Electric Buses",b:["ML-powered Flask application that predicts energy efficiency and optimises battery selection.","Real-time web system predicting company battery efficiency with a Random Forest.","Deployed on AWS EC2 with Amazon S3 for durable data storage."],f:["Dataset","Preprocess","Random Forest","Flask app","AWS EC2 + S3","Live prediction"],l:1},
+{k:"Machine learning",h:"AI-Driven Crop Recommendation System",b:["Analyses agricultural parameters to predict the most suitable crop.","Data preprocessing, feature selection and model evaluation in Jupyter Notebook.","Tuned to minimise overfitting; frontend connected to backend prediction APIs."],f:["Farm inputs","Clean + select features","Random Forest","Evaluate model","Backend API","Crop result"],l:1},
+{k:"Full stack · Workcohol",h:"Mentorship Booking Platform",b:["Complete React frontend: dashboards, booking workflows, role-based navigation.","REST API integration and a MySQL database with schema design and optimised queries.","Jenkins CI pipeline automating build, test and deployment."],f:["User signs in","Role-based dashboard","Book mentor","REST API","MySQL","Jenkins CI deploy"],l:1},
+{k:"Data analysis · Excel",h:"Ferns and Petals Sales Analysis",b:["Interactive Excel dashboard analysing sales across occasions and categories.","Data cleaning, total revenue and delivery-performance analysis.","Pivot tables, charts and slicers for monthly revenue, top products and top cities."],f:["Raw sales data","Clean data","Pivot tables","Charts + slicers","Dashboard insights"]}];
+const sk=[["Automation","Python",94],["Automation","Playwright",91],["Automation","Power Automate",89],["Automation","pywin32",84],["Automation","REST APIs",87],["Automation","OpenAI API",82],
+["Data","SQL",88],["Data","Pandas",90],["Data","OpenPyXL / XlsxWriter",85],["Data","Advanced Excel",93],["Data","Data Visualization",87],["Data","PySpark (learning)",72],
+["Monitoring","ServiceNow",92],["Monitoring","BMC Remedy",88],["Monitoring","Jira",82],["Monitoring","Root-Cause Analysis",90],
+["Web","React",80],["Web","HTML & CSS",89],["Web","JavaScript",78],["Web","Flask",78],["Web","MySQL",84],
+["ML & DevOps","Machine Learning",83],["ML & DevOps","Random Forest",85],["ML & DevOps","Jenkins CI",75],["ML & DevOps","AWS (EC2, S3, RDS)",74],
+["Salesforce & Office","Salesforce Admin",86],["Salesforce & Office","Flow Automation",83],["Salesforce & Office","PowerPoint & Word",85]];
+/* ---------- helpers ---------- */
+const flowHTML=(f,cap)=>`<div class="flow"><small>Workflow: ${cap}</small><div class="fl">${f.map((s,i)=>(i?'<span class="ar">→</span>':'')+`<span class="n">${s}</span>`).join('')}</div></div>`;
+const animFlow=el=>{const ns=$$('.n',el),ar=$$('.ar',el);let i=0;
+(function s(){ns.forEach((n,k)=>{n.className='n'+(k<i?' ok':k==i?' act':'');});ar.forEach((a,k)=>a.className='ar'+(k<i?' ok':''));
+i=(i+1)%(ns.length+1);setTimeout(s,i==0?1500:900)})()};
+/* ---------- name animation ---------- */
+const nm=$('#name'),NAME="P Sai Praneeth Reddy";
+function buildName(){nm.innerHTML='';let k=0;NAME.split(' ').forEach(w=>{const s=document.createElement('span');s.className='w';
+[...w].forEach(ch=>{const l=document.createElement('span');l.className='l';l.textContent=ch;l.style.setProperty('--i',k);
+l.style.color=`hsl(${(k*17+30)%360} 90% 68%)`;k++;s.appendChild(l)});nm.appendChild(s)});}
+buildName();nm.onclick=()=>{buildName()};setInterval(buildName,14000);
+/* ---------- typed ---------- */
+const roles=["Python automation","Playwright crawlers","Power Automate flows","reports that run themselves"];
+let ri=0,ci=0,del=false;const tp=$('#typed');
+(function t(){const w=roles[ri];tp.textContent=w.slice(0,ci);
+if(!del&&ci==w.length){del=true;return setTimeout(t,1500)}
+if(del&&ci==0){del=false;ri=(ri+1)%roles.length}
+ci+=del?-1:1;setTimeout(t,del?35:70)})();
+/* ---------- hero run ---------- */
+const hs=["Crawler logs in","Navigates filtered lists","Extracts ticket data","Reconciles counts","Builds Excel report","Sends to Teams / Outlook"];
+$('#hsteps').innerHTML=hs.map(s=>`<div class="step"><i></i>${s}</div>`).join('');
+const steps=$$('.step'),clock=$('#clock');
+function run(){steps.forEach(s=>s.className='step');$('#abar').style.width='0';clock.textContent='00:00';
+let i=0,sec=0;const tick=setInterval(()=>{sec+=20;clock.textContent='00:'+String(Math.min(sec,120)).padStart(2,'0')},800);
+(function nx(){if(i>0)steps[i-1].className='step ok';
+if(i==steps.length){clearInterval(tick);clock.textContent='02:00';$('#abar').style.width='8%';return setTimeout(run,6000)}
+steps[i].className='step act';i++;setTimeout(nx,950)})()}
+run();
+/* ---------- projects ---------- */
+$('#tabs').innerHTML=prod.map((p,i)=>`<button class="tab" role="tab" aria-selected="${!i}" data-i="${i}">${p.t}</button>`).join('');
+$('#panels').innerHTML=prod.map((p,i)=>`<div class="panel${i?'':' on'}"><div class="pg"><div><h3>${p.h}</h3><p class="tag">${p.g}</p><ul class="b">${p.b.map(x=>`<li>${x}</li>`).join('')}</ul><div class="chips">${p.c.map(x=>`<span>${x}</span>`).join('')}</div></div><div class="impact">${p.i.map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join('')}</div></div>${flowHTML(p.f,p.h)}</div>`).join('');
+$('#pgrid').innerHTML=pers.map(p=>`<div class="card rv"><span class="k">${p.k}</span><h3>${p.h}</h3><ul class="b">${p.b.map(x=>`<li>${x}</li>`).join('')}</ul>${flowHTML(p.f,p.h)}${p.l?'<a href="https://github.com/" target="_blank" rel="noopener">View on GitHub</a>':''}</div>`).join('');
+$$('.flow').forEach(animFlow);
+const tabs=$$('.tab'),panels=$$('.panel');let cur=0;
+function show(i){cur=i;tabs.forEach((t,k)=>t.setAttribute('aria-selected',k==i));panels.forEach((p,k)=>p.classList.toggle('on',k==i))}
+let auto=setInterval(()=>show((cur+1)%prod.length),14000);
+tabs.forEach((t,i)=>t.onclick=()=>{clearInterval(auto);show(i)});
+/* ---------- skills ---------- */
+const cats=["All",...new Set(sk.map(s=>s[0]))];
+$('#mq').innerHTML=[...sk,...sk].map(s=>`<span>${s[1].replace(/ \(.*/,'')}</span>`).join('');
+$('#fil').innerHTML=cats.map((c,i)=>`<button class="tab" aria-selected="${!i}">${c}</button>`).join('');
+function drawSk(c){$('#sg').innerHTML=sk.filter(s=>c=="All"||s[0]==c).map(s=>`<div class="sk"><div>${s[1]}<em>${s[2]}%</em></div><span><i data-w="${s[2]}"></i></span></div>`).join('');
+setTimeout(()=>$$('#sg i').forEach(i=>i.style.width=i.dataset.w+'%'),60)}
+$$('#fil .tab').forEach(b=>b.onclick=()=>{$$('#fil .tab').forEach(x=>x.setAttribute('aria-selected',x==b));drawSk(b.textContent)});
+drawSk("All");
+/* ---------- background, glow, progress, nav ---------- */
+const c=$('#bg'),x=c.getContext('2d');let W,H,P=[];
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight;P=Array.from({length:Math.min(70,W/18|0)},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4}))}
+rs();addEventListener('resize',rs);
+(function d(){x.clearRect(0,0,W,H);P.forEach((p,i)=>{if(!reduce){p.x+=p.vx;p.y+=p.vy}if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+x.fillStyle='#8b7bff';x.fillRect(p.x,p.y,2,2);
+for(let j=i+1;j<P.length;j++){const q=P[j],dd=Math.hypot(p.x-q.x,p.y-q.y);if(dd<130){x.strokeStyle='rgba(94,234,212,'+(1-dd/130)*.25+')';x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}});
+requestAnimationFrame(d)})();
+const gl=$('#glow');addEventListener('pointermove',e=>{gl.style.left=e.clientX+'px';gl.style.top=e.clientY+'px'});
+addEventListener('scroll',()=>{$('#prog').style.width=scrollY/(document.body.scrollHeight-innerHeight)*100+'%'},{passive:true});
+const links=$$('nav a');
+$$('section[id]').forEach(s=>new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.hash=='#'+s.id))}),{threshold:.3}).observe(s));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);
+$$('[data-n]',e.target).forEach(n=>{const T=+n.dataset.n,s=n.dataset.s;let v=0;const st=setInterval(()=>{v+=Math.max(1,T/40|0);if(v>=T){v=T;clearInterval(st)}n.textContent=v+s},30)})}),{threshold:.15});
+$$('.rv').forEach(e=>io.observe(e));
+if(!reduce)$$('.card').forEach(k=>{k.onpointermove=e=>{const r=k.getBoundingClientRect(),px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;k.style.transform=`perspective(700px) rotateY(${px*8}deg) rotateX(${-py*8}deg) translateY(-4px)`};k.onpointerleave=()=>k.style.transform=''});
+</script>
+</body>
+</html>
